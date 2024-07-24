@@ -45,10 +45,15 @@ export default function Page({ params }: { params: { slug: string } }) {
           <li>Maheesh Theekshana</li>
           <li>Chamindu Wickramasinghe</li>
           <li>Matheesha Pathirana</li>
-          <li>Nuwan Thushara</li>
-          <li>Dushmantha Chameera</li>
           <li>Binura Fernando</li>
+          <li>Asitha Fernando</li>
+          <li className="line-through">Nuwan Thushara</li>
         </ul>
+        <p className="mb-4 italic">
+          PS: Dushmantha Chameera & Nuwan Thushara has been ruled out of the
+          both T20 and ODI series due to injuries. Asitha Fernando and Dilshan
+          Madhusanka are included as replacements.
+        </p>
         <p className="mb-4">
           The T20 series will kick off on the 27th of July, followed by matches
           on the 28th and 30th of July, starting at 19:00 at Pallekale.
