@@ -10,10 +10,6 @@ export const metadata: Metadata = {
 export default function Page({ params }: { params: { slug: string } }) {
   return (
     <div className="bg-gray-100 min-h-screen py-8">
-      <Head>
-        <title>Sri Lanka vs India T20 Series 2024</title>
-        <meta name="description" content="Sri Lanka vs India T20 Series 2024" />
-      </Head>
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow text-black">
         <h1 className="text-3xl font-bold mb-6">
           Sri Lanka vs India T20 Series 2024
