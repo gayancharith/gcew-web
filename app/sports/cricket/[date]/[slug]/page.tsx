@@ -1,12 +1,9 @@
 import fs from "fs";
 import path from "path";
-// import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-// import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import matter from "gray-matter";
 
 interface BlogPageProps {
-  // source: MDXRemoteSerializeResult;
   frontMatter: { [key: string]: any };
 }
 
@@ -53,14 +50,11 @@ export default async function BlogPage({ params }: { params: IParams }) {
   if (!fileContent) {
     return <div>Blog post not found</div>;
   }
-  console.log({ fileContent });
-  // const source = await serialize(fileContent);
 
   // Return the MDXRemote component with the markdown content
   return (
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow text-black">
-        {/* <h1>{frontMatter.title}</h1> */}
         <MDXRemote
           source={fileContent}
           components={{

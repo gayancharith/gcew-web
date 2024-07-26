@@ -39,7 +39,7 @@ const getBlogPosts = (): BlogPost[] => {
     }
   }
 
-  return blogPosts;
+  return blogPosts.reverse();
 };
 
 export default function BlogList() {
