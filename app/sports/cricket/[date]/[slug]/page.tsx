@@ -76,16 +76,21 @@ export default async function BlogPage({ params }: { params: IParams }) {
             a: (props) => (
               <a className="text-blue-500 hover:underline" {...props} />
             ),
-            img: ({ src, alt, ...props }) => (
-              <NextImage
-                {...props}
-                src={src as string}
-                alt={alt as string}
-                layout="responsive"
-                width={300}
-                height={300}
-              />
-            ),
+            img: ({ src, alt, width, height, ...props }) => {
+              console.log({ width });
+              console.log({ height });
+              return (
+                <NextImage
+                  {...props}
+                  src={src as string}
+                  alt={alt as string}
+                  layout="responsive"
+                  width={(width as number) || 960}
+                  height={(height as number) || 540}
+                  priority
+                />
+              );
+            },
             blockquote: (props) => (
               <blockquote
                 className="border-l-4 border-gray-300 pl-4 italic mb-4"
