@@ -76,14 +76,15 @@ export default async function BlogPage({ params }: { params: IParams }) {
             a: (props) => (
               <a className="text-blue-500 hover:underline" {...props} />
             ),
-            img: (props) => (
-              <NextImage
-                {...props}
-                layout="responsive"
-                width={300}
-                height={300}
-              />
-            ),
+            // img: (props) => (
+            //   // <NextImage
+            //   //   {...props}
+            //   //   layout="responsive"
+            //   //   width={300}
+            //   //   height={300}
+            //   // />
+            //   // <img {...props} width={300} height={300} />
+            // ),
             blockquote: (props) => (
               <blockquote
                 className="border-l-4 border-gray-300 pl-4 italic mb-4"
